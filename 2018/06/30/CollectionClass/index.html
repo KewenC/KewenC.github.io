@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>集合类 | KewenC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1 集合类概述集合类又称容器。集合长度可变，存放对象的引用。相比数组，数组长度不变，存放基本类型的数据。常用的集合有：List集合、Set集合和Map集合。 2 Collection接口Collection接口是层次结构中的根接口，通常不能直接使用，但提供添加元素、删除元素、管理数据的方法。 3 List集合List集合：List接口和List接口的所有实现类。List集合中的元素允许重复，顺序是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="集合类">
+<meta property="og:url" content="http://yoursite.com/2018/06/30/CollectionClass/index.html">
+<meta property="og:site_name" content="KewenC">
+<meta property="og:description" content="1 集合类概述集合类又称容器。集合长度可变，存放对象的引用。相比数组，数组长度不变，存放基本类型的数据。常用的集合有：List集合、Set集合和Map集合。 2 Collection接口Collection接口是层次结构中的根接口，通常不能直接使用，但提供添加元素、删除元素、管理数据的方法。 3 List集合List集合：List接口和List接口的所有实现类。List集合中的元素允许重复，顺序是">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-30T13:14:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="集合类">
+<meta name="twitter:description" content="1 集合类概述集合类又称容器。集合长度可变，存放对象的引用。相比数组，数组长度不变，存放基本类型的数据。常用的集合有：List集合、Set集合和Map集合。 2 Collection接口Collection接口是层次结构中的根接口，通常不能直接使用，但提供添加元素、删除元素、管理数据的方法。 3 List集合List集合：List接口和List接口的所有实现类。List集合中的元素允许重复，顺序是">
+  
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+</html>
+<body style="
+
+
+  background-color: #eff0f6
+
+">
+  <div id="container">
+    <nav id="nav">
+  <header class="header">
+    <a href="/" class="title">KewenC</a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      
+        
+          
+            <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn iconfont icon-dribbble"></a>
+          
+        
+          
+            <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn iconfont icon-behance"></a>
+          
+        
+          
+            <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn iconfont icon-lofter"></a>
+          
+        
+          
+            <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn iconfont icon-instagram"></a>
+          
+        
+          
+            <a href="https://github.com/kewenc" target="_blank" class="nav-icn iconfont icon-github"></a>
+          
+        
+      
+    </div>
+    <div class="menu">
+      
+        
+            <a href="/" class="nav-menu ">HOME</a>
+          
+        
+            <a href="/archives" class="nav-menu ">ARCHIVE</a>
+          
+        
+            <a href="/about" class="nav-menu ">ABOUT</a>
+          
+        
+      
+    </div>
+  </div>
+</nav>
+    <div id="main"><section class="article">
+  <h2 class="title">集合类</h2>
+  <p class="sub">Jun 30, 2018</p>
+  <article class="content">
+    <h3 id="1-集合类概述"><a href="#1-集合类概述" class="headerlink" title="1 集合类概述"></a>1 集合类概述</h3><p>集合类又称容器。集合长度可变，存放对象的引用。相比数组，数组长度不变，存放基本类型的数据。常用的集合有：List集合、Set集合和Map集合。</p>
+<h3 id="2-Collection接口"><a href="#2-Collection接口" class="headerlink" title="2 Collection接口"></a>2 Collection接口</h3><p>Collection接口是层次结构中的根接口，通常不能直接使用，但提供添加元素、删除元素、管理数据的方法。</p>
+<h3 id="3-List集合"><a href="#3-List集合" class="headerlink" title="3 List集合"></a>3 List集合</h3><p>List集合：List接口和List接口的所有实现类。List集合中的元素允许重复，顺序是对象插入的顺序。</p>
+<h4 id="3-1-List接口"><a href="#3-1-List接口" class="headerlink" title="3.1 List接口"></a>3.1 List接口</h4><p>List接口继承Collection接口。</p>
+<ul>
+<li>get(int index): 获取元素。</li>
+<li>set(int index, Object obj): 指定索引位置的对象改为指定的对象。<h4 id="3-2-List接口的实现类"><a href="#3-2-List接口的实现类" class="headerlink" title="3.2 List接口的实现类"></a>3.2 List接口的实现类</h4>常用的实现类：ArrayList、LinkedList。</li>
+<li>ArrayList类：实现可变数组。优点：快速随机访问。缺点：插入和删除对象慢。</li>
+<li>LinkedList类：采用链表结构保存对象。优点：快速插入和删除对象。缺点：随机访问对象慢。<h3 id="4-Set集合"><a href="#4-Set集合" class="headerlink" title="4 Set集合"></a>4 Set集合</h3>Set集合：Set接口和Set接口的所有实现类。Set集合中的元素不允许重复，顺序不按特定的方式排序。<h4 id="4-1-Set接口"><a href="#4-1-Set接口" class="headerlink" title="4.1 Set接口"></a>4.1 Set接口</h4>Set接口继承Collection接口。<h4 id="4-2-Set接口的实现类"><a href="#4-2-Set接口的实现类" class="headerlink" title="4.2 Set接口的实现类"></a>4.2 Set接口的实现类</h4>常用的实现类：HashSet、TreeSet。</li>
+<li>HashSet类：继承Set接口，由哈希表支持，不保证Set的迭代顺序。</li>
+<li>TreeSet类：继承Set接口和SortedSet接口，通过比较器排序。<h3 id="5-Map集合"><a href="#5-Map集合" class="headerlink" title="5 Map集合"></a>5 Map集合</h3>Map集合：Map接口和Map接口的所有实现类。没有继承Collection接口，其提供key到value的映射。<h4 id="5-1-Map接口"><a href="#5-1-Map接口" class="headerlink" title="5.1 Map接口"></a>5.1 Map接口</h4></li>
+<li>put(K key, V value)</li>
+<li>containsKey(Object key)</li>
+<li>containsValue(Object value)</li>
+<li>get(Object key)</li>
+<li>keySet()</li>
+<li>values()<h4 id="5-2Map接口的实现类"><a href="#5-2Map接口的实现类" class="headerlink" title="5.2Map接口的实现类"></a>5.2Map接口的实现类</h4>常用的实现类：hashMap、TreeMap。</li>
+<li>HashMap类：基于哈希表的Map接口的实现。不保证映射的顺序。</li>
+<li>TreeMap类：实现Map接口和SortedMap接口。映射关系具有一定的顺序。</li>
+</ul>
+
+  </article>
+  <footer class="f-cf">
+    
+      <a href="/2019/07/08/hello-world/" class="link f-fl">⟵Hello World</a>
+    
+    
+      <a href="/2017/11/21/ReinstallSystem/" class="link f-fr">ReinstallSystem⟶</a>
+    
+  </footer>
+</section></div>
+    <footer id="footer" class="f-cf">
+  KewenC@outlook.com
+  
+    
+      
+        · <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn">Dribbble</a>
+      
+    
+      
+        · <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn">Behance</a>
+      
+    
+      
+        · <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn">Lofter</a>
+      
+    
+      
+        · <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn">Instagram</a>
+      
+    
+      
+        · <a href="https://github.com/kewenc" target="_blank" class="nav-icn">GitHub</a>
+      
+    
+  
+  <span class="copyright">All rights reserved @KewenC</span>
+</footer>
+  </div>
+</body>
+</html>
