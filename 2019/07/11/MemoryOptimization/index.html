@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>内存优化 | KewenC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Android 内存管理机制Java对象生命周期Java对象在虚拟机上运行有7个阶段  创建阶段(Created) 应用阶段(InUse) 不可见阶段(Invisible) 不可达阶段(Unreachable) 收集阶段(Collected) 终结阶段(Finalized) 对象空间重新分配阶段(Deallocated)创建的对象不需要使用，置空Object=null可提高内存使用效率内存分配在A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="内存优化">
+<meta property="og:url" content="http://yoursite.com/2019/07/11/MemoryOptimization/index.html">
+<meta property="og:site_name" content="KewenC">
+<meta property="og:description" content="Android 内存管理机制Java对象生命周期Java对象在虚拟机上运行有7个阶段  创建阶段(Created) 应用阶段(InUse) 不可见阶段(Invisible) 不可达阶段(Unreachable) 收集阶段(Collected) 终结阶段(Finalized) 对象空间重新分配阶段(Deallocated)创建的对象不需要使用，置空Object=null可提高内存使用效率内存分配在A">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-11T15:10:52.988Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="内存优化">
+<meta name="twitter:description" content="Android 内存管理机制Java对象生命周期Java对象在虚拟机上运行有7个阶段  创建阶段(Created) 应用阶段(InUse) 不可见阶段(Invisible) 不可达阶段(Unreachable) 收集阶段(Collected) 终结阶段(Finalized) 对象空间重新分配阶段(Deallocated)创建的对象不需要使用，置空Object=null可提高内存使用效率内存分配在A">
+  
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+</html>
+<body style="
+
+
+  background-color: #eff0f6
+
+">
+  <div id="container">
+    <nav id="nav">
+  <header class="header">
+    <a href="/" class="title">KewenC</a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      
+        
+          
+            <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn iconfont icon-dribbble"></a>
+          
+        
+          
+            <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn iconfont icon-behance"></a>
+          
+        
+          
+            <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn iconfont icon-lofter"></a>
+          
+        
+          
+            <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn iconfont icon-instagram"></a>
+          
+        
+          
+            <a href="https://github.com/kewenc" target="_blank" class="nav-icn iconfont icon-github"></a>
+          
+        
+      
+    </div>
+    <div class="menu">
+      
+        
+            <a href="/" class="nav-menu ">HOME</a>
+          
+        
+            <a href="/categories" class="nav-menu ">CATEGORIES</a>
+          
+        
+            <a href="/archives" class="nav-menu ">ARCHIVE</a>
+          
+        
+            <a href="/tags" class="nav-menu ">TAGS</a>
+          
+        
+            <a href="/about" class="nav-menu ">ABOUT</a>
+          
+        
+      
+    </div>
+  </div>
+</nav>
+    <div id="main"><section class="article">
+  <h2 class="title">内存优化</h2>
+  <p class="sub">Jul 11, 2019</p>
+  <article class="content">
+    <h2 id="Android-内存管理机制"><a href="#Android-内存管理机制" class="headerlink" title="Android 内存管理机制"></a>Android 内存管理机制</h2><h3 id="Java对象生命周期"><a href="#Java对象生命周期" class="headerlink" title="Java对象生命周期"></a>Java对象生命周期</h3><p>Java对象在虚拟机上运行有7个阶段</p>
+<ul>
+<li>创建阶段(Created)</li>
+<li>应用阶段(InUse)</li>
+<li>不可见阶段(Invisible)</li>
+<li>不可达阶段(Unreachable)</li>
+<li>收集阶段(Collected)</li>
+<li>终结阶段(Finalized)</li>
+<li>对象空间重新分配阶段(Deallocated)<br>创建的对象不需要使用，置空Object=null可提高内存使用效率<h3 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h3>在Android系统中’堆’实际上就是一块匿名共享内存。虚拟机没有直接管理，而是把他封装成一个mSpace，由底层C库管理。<br>Android系统为每一个应用程序设置一个最大限制阈值Dalvik Heap Size,若应用占用内存接近阈值，再分配内存就容易OOM。ActivityManager.getMemoryClass可查询应用阈值。</li>
+</ul>
+
+  </article>
+  <footer class="f-cf">
+    
+    
+      <a href="/2019/07/08/hello-world/" class="link f-fr">Hello World⟶</a>
+    
+  </footer>
+</section></div>
+    <footer id="footer" class="f-cf">
+  KewenC@outlook.com
+  
+    
+      
+        · <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn">Dribbble</a>
+      
+    
+      
+        · <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn">Behance</a>
+      
+    
+      
+        · <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn">Lofter</a>
+      
+    
+      
+        · <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn">Instagram</a>
+      
+    
+      
+        · <a href="https://github.com/kewenc" target="_blank" class="nav-icn">GitHub</a>
+      
+    
+  
+  <span class="copyright">All rights reserved @KewenC</span>
+</footer>
+  </div>
+</body>
+</html>
