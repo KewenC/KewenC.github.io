@@ -5,17 +5,17 @@
   
   <title>内存优化 | KewenC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android 内存管理机制Java对象生命周期Java对象在虚拟机上运行有7个阶段  创建阶段(Created) 应用阶段(InUse) 不可见阶段(Invisible) 不可达阶段(Unreachable) 收集阶段(Collected) 终结阶段(Finalized) 对象空间重新分配阶段(Deallocated)  创建的对象不需要使用，置空Object=null可提高内存使用效率 内存分">
+  <meta name="description" content="Android 内存管理机制Java对象生命周期Java对象在虚拟机上运行有7个阶段  创建阶段(Created) 应用阶段(InUse) 不可见阶段(Invisible) 不可达阶段(Unreachable) 收集阶段(Collected) 终结阶段(Finalized) 对象空间重新分配阶段(Deallocated)创建的对象不需要使用，置空Object=null可提高内存使用效率内存分配在A">
 <meta property="og:type" content="article">
 <meta property="og:title" content="内存优化">
 <meta property="og:url" content="http://yoursite.com/2019/07/11/MemoryOptimization/index.html">
 <meta property="og:site_name" content="KewenC">
-<meta property="og:description" content="Android 内存管理机制Java对象生命周期Java对象在虚拟机上运行有7个阶段  创建阶段(Created) 应用阶段(InUse) 不可见阶段(Invisible) 不可达阶段(Unreachable) 收集阶段(Collected) 终结阶段(Finalized) 对象空间重新分配阶段(Deallocated)  创建的对象不需要使用，置空Object=null可提高内存使用效率 内存分">
+<meta property="og:description" content="Android 内存管理机制Java对象生命周期Java对象在虚拟机上运行有7个阶段  创建阶段(Created) 应用阶段(InUse) 不可见阶段(Invisible) 不可达阶段(Unreachable) 收集阶段(Collected) 终结阶段(Finalized) 对象空间重新分配阶段(Deallocated)创建的对象不需要使用，置空Object=null可提高内存使用效率内存分配在A">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-11T15:19:06.531Z">
+<meta property="og:updated_time" content="2019-07-11T16:48:05.436Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内存优化">
-<meta name="twitter:description" content="Android 内存管理机制Java对象生命周期Java对象在虚拟机上运行有7个阶段  创建阶段(Created) 应用阶段(InUse) 不可见阶段(Invisible) 不可达阶段(Unreachable) 收集阶段(Collected) 终结阶段(Finalized) 对象空间重新分配阶段(Deallocated)  创建的对象不需要使用，置空Object=null可提高内存使用效率 内存分">
+<meta name="twitter:description" content="Android 内存管理机制Java对象生命周期Java对象在虚拟机上运行有7个阶段  创建阶段(Created) 应用阶段(InUse) 不可见阶段(Invisible) 不可达阶段(Unreachable) 收集阶段(Collected) 终结阶段(Finalized) 对象空间重新分配阶段(Deallocated)创建的对象不需要使用，置空Object=null可提高内存使用效率内存分配在A">
   
   <link rel="stylesheet" href="/css/index.css">
 </head>
@@ -91,10 +91,8 @@
 <li>不可达阶段(Unreachable)</li>
 <li>收集阶段(Collected)</li>
 <li>终结阶段(Finalized)</li>
-<li>对象空间重新分配阶段(Deallocated)</li>
+<li>对象空间重新分配阶段(Deallocated)<br>创建的对象不需要使用，置空Object=null可提高内存使用效率<h3 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h3>在Android系统中’堆’实际上就是一块匿名共享内存。虚拟机没有直接管理，而是把他封装成一个mSpace，由底层C库管理。<br>Android系统为每一个应用程序设置一个最大限制阈值Dalvik Heap Size,若应用占用内存接近阈值，再分配内存就容易OOM。ActivityManager.getMemoryClass可查询应用阈值。</li>
 </ul>
-<p>创建的对象不需要使用，置空Object=null可提高内存使用效率</p>
-<h3 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h3><p>在Android系统中’堆’实际上就是一块匿名共享内存。虚拟机没有直接管理，而是把他封装成一个mSpace，由底层C库管理。<br>Android系统为每一个应用程序设置一个最大限制阈值Dalvik Heap Size,若应用占用内存接近阈值，再分配内存就容易OOM。ActivityManager.getMemoryClass可查询应用阈值。</p>
 
   </article>
   <footer class="f-cf">
